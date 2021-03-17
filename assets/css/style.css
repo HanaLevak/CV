@@ -115,6 +115,10 @@ h4 {
 
 
 /*--------------------------------------------Heading*/
+.container-fluid.header{
+    padding: 0;
+}
+
 
 header {
     margin: 0;
