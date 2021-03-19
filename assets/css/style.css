@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 /*--------------------------------------------Colors*/
- .img-404{
-   display: block;
-    margin: auto;
- }
-.text-black-error_404{ text-align: center;
-color: #110610;}
- 
+
 
 .bg-color-name-title {
     background-color: #676767;
@@ -231,8 +225,9 @@ footer .cv-pdf i:hover {
 }
 
 .social-links {
-   /* display: flex;*/
-   padding-bottom: 1rem;
+    display: flex;
+    padding-bottom: 1rem;
+
 }
 
 .social-links li a i {

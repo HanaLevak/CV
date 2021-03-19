@@ -171,12 +171,31 @@ function initMap() {
           center: {
                lat: 48.160900,
                lng:  17.054584
-            }
+            },
         });
-                var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+            const labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+            const markers = locations.map((location, i) => {
+    return new google.maps.Marker({
+      position: location,
+      label: labels[i % labels.length],
+    });
+  });
 
-            var locations = [{
-                lat: 40.785091,
+   new MarkerClusterer(map, markers, {
+    imagePath:
+      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+  });
+}
+var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath:"https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",});/* `${path}/m`});*/
+
+
+            const locations = [{
+                  lat: -31.56391,
+                lng: 147.154312 },
+                { lat: -33.718234,
+                    lng: 150.363181 },
+                  {  lat: 40.785091,
                 lng: -73.968285
             }, {
                 lat: 41.084045,
@@ -186,21 +205,11 @@ function initMap() {
                 lng: -73.984016
             }];
 
-            var markers = locations.map(function(location, i) {
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
-                });
-            });
-
-            var markerCluster = new MarkerClusterer(map, markers, {
-                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-            });
-        }
+        
 </script>
-
  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHcJIfDmTkEwvkquv14L18VLmpnW2HhwQ&callback=initMap"
-  type="text/javascript"></script>
+ <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHcJIfDmTkEwvkquv14L18VLmpnW2HhwQ&callback=initMap"></script>
+ 
 </body>
 </html>
