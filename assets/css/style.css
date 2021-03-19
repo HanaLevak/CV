@@ -115,10 +115,11 @@ h4 {
 
 
 /*--------------------------------------------Heading*/
+/*
 .container-fluid.header{
     padding: 0;
 }
-
+*/
 
 header {
     margin: 0;
@@ -237,11 +238,11 @@ footer .cv-pdf i:hover {
 .social-links li a i {
     width: 32px;
     height: 32px;
-    padding: 12px;
+    padding: 12px 0;
     border-radius: 50%;
     font-size: 13px;
     line-height: 7px;
-    text-align: start ;
+    text-align: center ;
     color: #fafafa;
     background: #8f8f8f;
     transition: all 0.35s ease-in-out;
@@ -255,7 +256,6 @@ footer .cv-pdf i:hover {
 }
 
 #footer-details {
-    margin-top: auto;
     margin: 20px;
 }
 
@@ -418,7 +418,8 @@ div#map {
     .section-column {
         padding: 0 30px 30px;
         float: none;
-        display: table-footer-group;
+        display: table-cell;/*
+        display: table-footer-group;*/
     }
 
 }
